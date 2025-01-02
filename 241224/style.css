@@ -1,1 +1,225 @@
-@import url("./reset.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  width: 428px;
+  height: 926px;
+  background: #ffde03;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+}
+body main #topcontents {
+  text-align: center;
+}
+body main #topcontents img {
+  margin-bottom: 30px;
+}
+body main #topcontents h4 {
+  font-size: 1.17rem;
+  font-weight: lighter;
+}
+body main #topcontents h4 span {
+  font-weight: bold;
+}
+body main #snslogo {
+  text-align: center;
+  margin: 200px 0;
+}
+body main #snslogo h4 {
+  font-size: 0.94rem;
+  font-weight: lighter;
+  color: #4833cc;
+  margin-bottom: 10px;
+}
+body main #snslogo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body main #bottomcontents .btn {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  color: #606060;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  z-index: 2;
+  background: #f5efef;
+}
+body main #bottomcontents .btn .fa-download {
+  transform: rotate(-90deg);
+}
+body main #bottomcontents #uesrsearch {
+  text-align: center;
+  color: #606060;
+  font-size: 1.17rem;
+}
+body main #bottomcontents #uesrsearch span:first-child {
+  position: relative;
+  margin-right: 78px;
+}
+body main #bottomcontents #uesrsearch span:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: -40px;
+  width: 2px;
+  height: 14px;
+  background: #606060;
+}
+body main.introBG {
+  background: #ffffff;
+  padding: 60px 33px 135px;
+}
+body main.introBG header {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 142px;
+}
+body main.introBG header h4 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.17rem;
+  font-weight: lighter;
+}
+body main.introBG header p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.47rem;
+}
+body main.introBG header p span {
+  font-weight: bold;
+}
+body main.introBG section {
+  margin: 50px 0 106px;
+}
+body main.introBG footer .btn {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  color: #606060;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  z-index: 2;
+  margin-top: 10px;
+  background: #ffde03;
+}
+body main.friendsBG {
+  background: #ffffff;
+  padding: 60px 33px 135px;
+  position: relative;
+}
+body main.friendsBG header {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 142px;
+}
+body main.friendsBG header h4 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.17rem;
+  font-weight: lighter;
+}
+body main.friendsBG header p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.47rem;
+}
+body main.friendsBG header p span {
+  font-weight: bold;
+}
+body main.friendsBG header {
+  height: 172px;
+}
+body main.friendsBG section {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body main.friendsBG section ul li {
+  text-align: center;
+}
+body main.friendsBG section ul li a {
+  font-size: 2.35rem;
+}
+body main.friendsBG footer .buttons {
+  z-index: 2;
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+  gap: 12px;
+}
+body main.friendsBG footer .buttons .btn {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  color: #606060;
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  z-index: 2;
+  width: 174px;
+  background: #ffde03;
+}
+body main.friendsBG footer .buttons .btn:first-child {
+  background: #f5efef;
+}
+body main.friendsBG::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  top: 0;
+}
+body main.friendsBG::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  bottom: 0;
+  transform: rotate(180deg);
+}

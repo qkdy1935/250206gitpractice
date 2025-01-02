@@ -1,12 +1,15 @@
-const form = document.querySelector("form");
-const word = form.querySelector("#word");
-const h1 = document.querySelector("h1");
+const slides = document.querySelector(".slides");
+const slide = slides.querySelectorAll("li");
+const slideconut = slide.length;
 
-h1.style.color = "#02c13c";
+for (let i = 0; i < slideconut; i++) {
+  const cloneSlide = slide[i].cloneNode(true);
+  cloneSlide.classList.add("clone");
+  slides.append(cloneSlide);
+}
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const userValue = word.value;
-  console.log(userValue);
-  alert(userValue);
-});
+for (let i = slideCount - 1; i >= 0; i--) {
+  const cloneSlide = slide[i].cloneNode(true);
+  cloneSlide.classList.add("clone");
+  slides.prepend(cloneSlide);
+}
