@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./style01.css" /> 외부-->
+    <title>Document</title>
+    <style>
+      /* reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* h1 {
+        background: crimson; */
+
+      p {
+        color: brown;
+        &#special {
+          color: blue;
+        }
+      }
+
+      .BGstyle {
+        background: aqua;
+      }
+
+      /* input {
+        &[type="text"] {
+          background: crimson;
+        }
+        &[type="password"] {
+          background: dodgerblue;
+        }
+      } */
+
+      #header {
+        & > h1 {
+          color: brown;
+        }
+      }
+
+      #listEX {
+        #firstLI + li {
+          color: crimson;
+        }
+        #firstLI ~ li {
+          font-size: 30px;
+        }
+      }
+
+      /* h3:hover {
+        color: aqua;
+      }
+      h3:active {
+        color: crimson;
+      } */
+      h3 {
+        &:hover {
+          color: aqua;
+        }
+        &:active {
+          color: crimson;
+        }
+      }
+
+      input {
+        &:enabled {
+          background: greenyellow;
+        }
+        &:disabled {
+          background: gainsboro;
+        }
+        &:focus {
+          background: tomato;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="background: crimson">오늘은 신나는 금요일</h1> 인라인-->
+    <h1>오늘은 신나는 금요일</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ipsa
+      quisquam, tempore sunt delectus adipisci magni eaque nesciunt ipsam ut
+      ducimus iusto, obcaecati doloremque rem facere, cum et. Alias, officiis.
+    </p>
+    <p id="special">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eius error
+      odio autem at rerum totam ipsum omnis magnam illo, exercitationem velit
+      eligendi mollitia quasi necessitatibus placeat alias dicta porro. Nam
+      dolorum corrupti in iure excepturi illo! Reprehenderit rem accusantium,
+      voluptatum doloribus dolorem ad esse nisi excepturi ipsam, impedit eos
+      dolore sed sapiente saepe iusto suscipit voluptate quia cum officia.
+      Dolore numquam ullam, illum nulla libero non. Provident quos pariatur
+      perspiciatis aspernatur aperiam sequi totam ratione atque perferendis?
+      Aperiam laudantium corrupti exercitationem consectetur voluptatem
+      repellendus odit totam reprehenderit architecto dolores! Possimus, in
+      ullam. Quos ab aperiam unde doloremque dolores impedit labore quas vel sit
+      sapiente assumenda recusandae non suscipit quaerat, nemo voluptatum
+      delectus modi. Atque consequatur rerum ex itaque tempora?
+    </p>
+    <ul id="listEX">
+      <li id="firstLI">첫 번째</li>
+      <li class="BGstyle">두 번째</li>
+      <li>세 번째</li>
+      <li class="BGstyle">네 번째</li>
+    </ul>
+    <hr />
+    <form action="">
+      <input type="text" name="" id="" />
+      <input type="password" name="" id="" />
+    </form>
+    <hr />
+    <div id="header">
+      <h1 class="title">Lorem ipsum</h1>
+      <div class="nav">
+        <h1>Navigation</h1>
+      </div>
+    </div>
+    <h3>User Action Selector</h3>
+    <hr />
+    <form action="">
+      <h2>Enabled</h2>
+      <input type="text" name="Enabled" id="Enabled" />
+      <h2>Disabled</h2>
+      <input type="text" name="Disabled" id="Disabled" disabled />
+    </form>
+  </body>
+</html>

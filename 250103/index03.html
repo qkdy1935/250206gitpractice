@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      ul {
+        display: flex;
+        li {
+          padding: 15px;
+          &:nth-child(1) {
+            background: tomato;
+          }
+          &:last-child {
+            background: gold;
+          }
+          &:nth-child(2n) {
+            background: crimson;
+          }
+          &:nth-child(2n + 1) {
+            background: yellowgreen;
+          }
+        }
+      }
+
+      #headerBox {
+        h3:first-of-type {
+          color: crimson;
+        }
+        h1:last-of-type {
+          color: blueviolet;
+        }
+        h2:nth-of-type(2) {
+          color: chocolate;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <hr />
+    <!-- (h${header - $}*3)*2 -->
+    <!-- div.headerBox>(h${header - $}*3)*2 -->
+    <div id="headerBox">
+      <h1>hrader - 1</h1>
+      <h2>hrader - 2</h2>
+      <h3>hrader - 3</h3>
+      <h3>hrader - 3</h3>
+      <h2>hrader - 2</h2>
+      <h1>hrader - 1</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+div#nav>ul>(li>a{menu -$})*3
+
+<div id="header">html5 header</div>
+    <div id="nav">
+      <ul>
+        <li><a href="">menu -1</a></li>
+        <li><a href="">menu -2</a></li>
+        <li><a href="">menu -3</a></li>
+      </ul>
+    </div>
+
+
+div>(div>h1+p)*2
+semanticd
+
+<div>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+      <div>
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+
+
+
+div.footer>adress
+
+<div class="footer">
+      <adress></adress>
+    </div> 
+
+
+CSS3
+>
+
+>적용3가지
+
+- 인라인 (태그 안에 작성)
+<h1 style="background: crimson">오늘은 신나는 금요일</h1>
+
+- 내부
+   <style>
+      h1 {
+        background: crimson;
+      }
+    </style>
+
+- 외부
+<link rel="stylesheet" href="./style01.css" />
+
+
+1) 선택자
+- 전체선택자 : * <--trset CSS
+=html 문서 내 모든 태그를 전체 찾아와서 스타일을 적용
+
+- 태그선택자 : 
+html을 통해서 입력한 태그명을 그대로 가져와서 스타일을 적용
+
+- id 선택자 : 
+html문서상에 id라는 속성을 부여하고 해당 id속성값을 활용해서 선택자로 사용하는 것
+
+-클래스 선택자 : 
+html 문서상에 class라는 속성을 부여하오 해당 class속성값을 선택자로 사용하는것
+
+-속성선택자 :
+ html 태그 내 속성을 구분하여 스타일선택자로 사용하는 것
+
+-후손 & 자손 선택자 : 후손은 자손을 포함한 모든 자식요소들을 의미
+부모요소의 직계 자식만을 의미 자손은 후손안에 포함되는 개념
+
+-동위선택자 :  
+동일한 부모 및에 복수의 형제가 존재 할 떄 특정 형제를 기준으로 다음번 혹릉 복수의 형제를 선택자로 찾아오고 싶을ㄸ"ㅒ
+
+1) 특정 형제의 다음번의 형제를 찾아올 때
+2) 특정 형제 아래 모든 형제들을 찾아올 때
+
+-반응선택자 : 
+사용자의 이벤트로 인해서 태그가 반응할떄 스타일 속성을 줄 수 있는 선택자
+
+상태선택자 :
+html 태그 안에 상태를 정의할 수 있는 태그들이 존재 해당 태그들의 상태에 따라서 스타일 속성을 상이하게 적응하고자 할 때
+> form > checkbox & radio
+> form > input
+
+-구조선택자 :
+
+1) 일반구조선택자 : &:first-child , &:last-child  ,&:nth-child(1) 순서
+&: nth-child(2n) = 짝수 -> even
+&:nth-child(2n + 1) = 홀수 -> odd
+- 특정부모 밑에 자식요소들이 모두 같은 경우에 사용가능  ul>li*4
+
+2)형태구조 선택자 : first-of-type , last-of-type , nth-of-type(2)
+nth-of-type (even/odd)
+- 특정 부모밑에 자식요소들이 하나라도 상이한 경우에 사용가능
+
+- 문자선택자 : 
+1) 전 문자선탣자
+ - 특정 텍스트 혹은 태그 요소를 작성한 해당 요소 앞쪽(좌/강대적 앞쪽)에 어떤 문자 혹은 태그 등을 만들어서 사용하고자 싶을 때
+
+2) 후 문자선택자
+ - 특정 텍스트 혹은 태그 요소를 작성한 후 해당 요소뒤쪽 (우/ 상대적 뒤)에 어떤 의미에 어떤 문자 록은 태그 등을 만들어서 삽입하고자 할 때
+
+3) 전후문자선택자
+ - ::before
+ - ::after
+> 반드시 내부에 컨텐츠라는 속성이 있어야함 contents ""
+
+- 링크선택자 : 
+
+- 부정선택자 : 
+
+------------------------------------------
+
+2) 속성
+
+
+
+------------------------------------------
+
+3) 변환 / 전환 / 애니메이션
+
+변환
+transition: all 0.5s;
+
+전환
+transform: translate(-50%);
+
+
+--------------------------------------------------------
+
+* id는 한번만 사용
+id의 속성값을 선택자로 찾아올때 앞에 #붙이기
+
+p {
+        color: brown;
+        &#special {
+          color: blue;
+        }
+      }
+= & 중복태그
+
+---------
+
+*class
+<li>첫 번째</li>
+      <li class="BGstyle">두 번째</li>
+      <li>세 번째</li>
+      <li class="BGstyle">네 번째</li>
+
+.BGstyle {
+          background: aqua;
+        }
+ = .으로 불러옴
+
+-----------------
+form>input:text+input:password
+<form action="">
+      <input type="text" name="" id="">
+      <input type="password" name="" id="">
+    </form>
+
+#header{
+        & > h1{
+          color: brown;
+        }
+      }
+
+= 자손 &한번더 선택 >자손붙이기 hrader밑에 h1태그 
+
+----------------
+
+#header{
+          h1{
+          color: brown;
+        }
+      }
+
+=후손 hrader밑에 h1태그 전체 선택
+
+---------------
+
+*동위 선택자
+
+<ul id="listEX">
+      <li id="firstLI">첫 번째</li>
+      <li class="BGstyle">두 번째</li>
+      <li>세 번째</li>
+      <li class="BGstyle">네 번째</li>
+    </ul>
+
+#listEX {
+        #firstLI + li {
+          color: crimson;
+        = 바로 다음 태그
+
+        #firstLI ~ li {
+          font-size: 30px;
+=모든 태그
+
+-------------
+
+*반응 선택자 :hover , :active 
+h3:hover {
+        color: aqua;
+      }
+
+ h3:active {
+        color: crimson;
+      }
+------------------
+
+*상태선택자
+
+<form action="">
+      <h2>Enabled</h2>
+      <input type="text" name="Enabled" id="Enabled" />
+      <h2>Disabled</h2>
+      <input type="text" name="Disabled" id="Disabled" disabled />
+    </form>
+
+input {
+        &:enabled {
+          background: greenyellow;
+        }
+        &:disabled {
+          background: gainsboro;
+        }
+        &:focus {
+          background: tomato;
+        }
+      }
+
+
+input[type="checkbox"]:checked + div {
+        height: 0;
+      
+= 체크박스의 상태에 따라 달라짐
+
+overflow: hidden; = div 라는 부모요소에 자식요소가 넘치면 가리라는 뜻
+
+
+ 전환효과 - transition
+
+
+
+form>(h2+input:text)*2
+
+<form action="">
+      <h2></h2>
+      <input type="text" name="" id="">
+      <h2></h2>
+      <input type="text" name="" id="">
+    </form>
+
+
+형태구조 선택자
+
+(h${header - $}*3)*2
+
+<div id="headerBox">
+      <h1>hrader - 1</h1>
+      <h2>hrader - 2</h2>
+      <h3>hrader - 3</h3>
+      <h3>hrader - 3</h3>
+      <h2>hrader - 2</h2>
+      <h1>hrader - 1</h1>
+    </div>
+
+<style>
+#headerBox {
+        h3:first-of-type {
+          color: crimson;
+= h3의 첫번쨰
+
+        h1:last-of-type {
+          color: blueviolet;
+        }
+        h2:nth-of-type(2) {
+          color: chocolate;
+
+--------------------------------------
+reset 
+<style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+    </style>
+
+
+
+display: flex; = 수평정렬
+padding = 안족 여백
+
+
+--------------------------------
+*전후문자선택자
+p {
+        counter-increment: num;
+        &::before {
+          content: counter(num) ".";
+
+--------------------------------
+
+커스텀 CSS
+data - ___=" "
+<p data-page="52">
+
+<style>
+ &::after {
+          content: attr(data-page);
+&::after {
+          content: " - " attr(data-page) " page";
+
+---------------------------------------------
+
+ul.gnb(li>a)*5
+
+
+----------------------------------------
+전후문자 선택자
+
+<ul class="gnb">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">CONTRNTS</a></li>
+      </ul>
+
+
+<style>
+
+.gnb {
+        display: flex;
+        gap: 15px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        li {
+          a {
+            font-size: 14px;
+            position: relative;
+            padding-bottom: 4px;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              width: 0;
+              height: 1px;
+              background: dodgerblue;
+              transition: all 0.5s;
+              transform: translate(-50%);
+            } 
+            &:hover::before {
+              width: 100%;
+
+
