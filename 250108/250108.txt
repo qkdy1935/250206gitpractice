@@ -1,0 +1,84 @@
+. vs code 생겼을때
+. giteignore = 커밋하고 싶지 않은 파일명 
+- 대용량파일 git 데이터 용량 제한 100메가
+
+반응선택자
+a태그에
+transition: background 0.3s, color 0.3s;
+          &:hover {
+            background: var(--gnb-font-color);
+            color: var(--main-light-color);
+
+transition: background 0.3s, color 0.3s; => all 0.3s(불필요한 상황까지 변경됨)
+
+
+
+figure - 프로모션 이벤트 태그
+
+비율운 깨지지않게 여백 채우기 object-fit: cover;
+
+
+대/소문자 바꾸기
+ text-transform: uppercase; 
+
+
+자간 
+letter-spacing
+
+
+카드 만들기
+
+justify-content: space-between; 양끝에 맞춰 중간 여백을 알아서 맞춰줌
+
+
+
+&copy; =  ©
+
+배포 호스팅----
+Node
+LTS : long term sevice/support
+
+node -v
+npm -v
+
+f전역에 설치
+cmd 관리자 권한으로 실행
+
+
+터미널 
+firebase 로그인 안될때
+
+1) 터미널 commend prompt 바꿔보기
+
+2) npm 경로 누락
+시스템 환경 변수 편집에서
+npm환경변수 등록해주기
+
+깃이슈 문제점 기록하기
+
+로그인 후 firebase초기화하기
+firebase init
+
+호스팅 선택
+프로젝트 가져오기
+프로젝트 선택하기
+
+public directory
+만들기
+
+public파일 만들어짐
+
+public 파일안에 호스팅 할 파일 넣기
+
+firebase deploy = 최종배포
+
+https://myproject0108-4fb36.web.app
+
+
+
+
+
+
+
+
+
