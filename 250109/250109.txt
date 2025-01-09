@@ -1,0 +1,117 @@
+firebase  
+
+1. SSR :
+- sever side rendering
+- client가 요청할떄마다 sever가 요청을 받은 페이지를 갈아끼워주는 방식
+
+2. CSP :
+- React.js
+- client side rendering
+- client가 어떤 페이지를 요청
+- 해당 레인페이지 뿐만 아니라 메인페이지 안에 연결되어 있는 모든 페이지 소스 정보를 한번에 server가 clienr에게 전달
+- 다른페이지 이동할떄, 깜박거림릐 불편함이 해소, 페이지 이동 시 매우 빠르게 이동
+
+3.. SPA :
+- single  page  application
+- 1개의 html >복수의 js 연결해서 여러개의 페이지를 구현할 수 있도록 만든 앱 설계 방식의 페이지
+- page routing
+
+4. React.js (단점)
+- 사용자 입장에서 특정 웹사이트의 매인페이지를 처음 열어볼 떄 만약 메인페이지 안에 고사양, 고용량의 동영상 혹은 이미지가 들어 있다면 => 해당 메인페이지를 로딩해오는데 굉장히 더디게 출력 
+- client가 최초에 server에게 받아와야하는 데이터들이 굉장히 용량이 용량이 큰 경우 뚝뚝 끊기는 현상 발생
+
+- TTI : time to interval
+=>client가 server에게 페이지를 요청한 이후에 FCP 단계까지 도달하는데 걸리는 인터벌 시간
+
+
+- FCP가 비효율
+=> First contenfui paint
+=>client가 server로부터 요청한 데이터를 브라우저에 최초로 출력시킨 상태 
+
+5. SSR회귀
+- server가 client의 요청에 따라서 data를 전달하는 방식은 예전과 다를바 없음
+- pre-rendering (*사전렌더링)
+
+
+배포---------------------------------------------------
+
+https://www.netlify.com/
+
+넷리파이 약점
+넷리파이는 배포가 메인
+배포직전에 만약 치명적인 에러와 단점이 아니더라도 바로 배포 무마
+
+
+cmd 관리자 권한 실행
+git-v
+
+깃소유주 정보
+git config --list
+
+깃소유주 정보 등록
+git config --globel user.name " "
+git config --globel user.emil " "
+git config --list (소유주 정보 조회)
+
+git-hub 안에 배포하고자 하는 배포전용 repository 생성
+
+git bash
+1. git init : 깃 초기화 
+(git init명령어 : 현재폴더에서 버전관리를 해당 폴더를 기준으로 하겠다)
+
+2. git remote add origin 주소 : 해당 repository 주소연결
+
+3. git remote -v : 로컬 원결 연결확인
+
+4. git add . : 파일 선택
+
+5. git status : 파일 확인
+
+6. git commit -m "firstcommit" : "firstcommit"  아룸으로 커밋
+
+7. git push origin master : 데이터 올리기
+
+수정 후 배포
+
+
+
+본인들의 gihub 메이크업
+포트폴리오 홈페이지
+개별 포트폴리오 작엄물소개
+
+---------------------------------------------------------------
+
+https://peaceful-custard-dd44eb.netlify.app/
+
+--------------------------------------
+
+transition : 전환
+- a과 b로 변경되는 순간을 제어할 수 있도록 하는 속성
+- 얼만큼 천천히 빨리 어느정도의 시간동안 어느 정도의 시간을 기다렸다가 어느 정도의 가속도 어떤 감속도로
+
+transition-duration : 얼마의 시간동안 상태 변화를 진행되도록 할 것인가
+transition-delay : 얼마의 (시간)지연 후 상태변화를 진행하게 할 것인가
+transition-timing-function : 어떤 가속.감속을 적용할것인가
+(https://cubic-bezier.com/#.17,.67,.83,.67)
+transition-property : 어떤 속성 요소에  
+
+transition 축약형  :  속성(background,width,color...)  , 속도 , 감(가)속, 속도
+
+
+
+반응선택자
+반응의 이전 단계에서 transition 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
