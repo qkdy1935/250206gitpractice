@@ -1,0 +1,78 @@
+1초 영상 
+> 29프레임
+> 30개의 정지된 스틸 이미지로 완성
+
+frame
+
+전환 : transition
+애니메이션 : animation
+변환 : transform
+
+
+animation - name : keyframes 를 활용해서 정의한 애니메이션 이름을 입력
+
+animation-duration : 시간
+
+animation-timing-function : 구현되는 애니메이션의 가속도를 설정
+
+animation-iteration-count : 반복횟수
+
+animation-directio :  진행방향을 결정 ( 일반, 반대로도 가능)
+
+animation-play-state :  애니메이션의 진행상태를 제어
+
+
+animation: circle;
+animation-duration: 2s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+&:hover {
+ animation-play-state: paused;
+
+
+축약형 : 이름 시간 가속도 딜레이 반복 진행방향
+animation: circle 2s linear none infinite alternate; 
+
+
+-----------------------------------------------------------
+
+transform : 변환
+
+html을 통해서 만든 요소들의 형태를 변환시킬떄
+형태 // 위치 변환 
+
+1. 각도
+2. 크기
+3. 기울기
+4. 위치 ( x , ,y , ,z축 (공간감) 가능
+
+--------------------------------
+3차원 육면 함수
+
+3D 정육면체
+
+perpective = 관점 // 원근법
+=> 사진 촬영 때
+2d요소를 하나의 장면으로 담아주는 기계
+가까이 있는 사람과 멀리 있는 사람을 식별은 크고 작게 원근감
+
+=>css사용자가 모니터를 바라보는 상항애서 상대적으로 사용자에게 가깝게 느껴지도록 하는 속성
+위치 속성 Z-index :  크면 클수록
+ -------------------------------
+perspective
+=> 기본적으로 3d값을 가지고 있는 요소들의 z값의 defult는 0에서 시작
+
+=>prepective의 값이 클수록 해당 요소를 바라보는 간격이 저진다얖
+
+
+
+
+
+
+
+
+
+
+
+
