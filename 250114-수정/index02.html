@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parant {
+        border: 5px solid green;
+        display: flex;
+        /* 부모요소 아래 자식 요소들의 넓이 값을 보장할떄 */
+        /* flex-wrap: wrap; */
+        /* direction , wrap상기 두가지를 한번에 사용할수 있는 축약형 */
+        flex-flow: row wrap;
+        div {
+          width: 100px;
+          height: 100px;
+          background: crimson;
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="parant">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+      <div class="child">4</div>
+      <div class="child">5</div>
+      <div class="child">6</div>
+    </main>
+  </body>
+</html>
