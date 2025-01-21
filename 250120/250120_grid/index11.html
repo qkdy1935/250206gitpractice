@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .wraper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-gap: 5px;
+        grid-template-rows: 100px 150px 1fr 150px 100px;
+        grid-template-columns: 300px 1fr 300px;
+        div {
+          background: skyblue;
+          display: grid;
+          justify-content: center;
+          border: 1px solid #fff;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="wraper">
+      <div class="header">header</div>
+      <div class="menu">menu</div>
+      <div class="section">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <div class="top">top</div>
+      <div class="aside">aside</div>
+      <div class="button">bytton</div>
+      <div class="footer">footer</div>
+    </main>
+  </body>
+</html>

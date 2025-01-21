@@ -1,0 +1,21 @@
+grid :  사전에 몇 행 몇 열로 서비스를 만들것인가? 명확 & 수정 및 변경이 최소화
+
+fraction : 파편 || 조각
+
+
+auto
+1fr 
+
+> justfiy-content : auto VS 1fr
+
+* 평소에는 똑같음
+하나의 덩어리가 된 상태에서 정렬을 주고 싶을떄 fr은 공간을 이미 차지하고 있음 반면 auto는 부모의 요소에 따라 자동으로 바뀜
+
+
+grid-template-columns : 몇개의 열을 만들것인가?
+
+grid-template-rows : 몇 개의 행을 만들것인가?
+
+grid축약
+
+grid: 100px 200px (rows) / auto auto auto; (columns)

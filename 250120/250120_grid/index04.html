@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        border: 5px solid #000;
+        background: lightcyan;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        align-items: center;
+        height: 300px;
+        div {
+          background: darkorange;
+          /* width: 100px;
+          height: 100px; */
+          color: #fff;
+          text-align: center;
+          /* line-height: 100px; */
+          &:nth-child(2) {
+            /* justify-self: end;
+            align-self: end; 독립적 가능 */
+            justify-self: stretch;
+            align-self: stretch; /* 부모요소 사이즈를 풀로 사용 */
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </body>
+</html>
