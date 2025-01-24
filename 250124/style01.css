@@ -1,0 +1,88 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+body .complete {
+  width: 150px;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid #dc143c;
+  color: #dc143c;
+}
+body .complete.complete:hover {
+  background: #dc143c;
+  color: #ffffff;
+}
+body .complete.looding:hover {
+  background: #4169e1;
+  color: #ffffff;
+}
+body .complete.error:hover {
+  background: #008800;
+  color: #ffffff;
+}
+body .looding {
+  width: 150px;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid #4169e1;
+  color: #4169e1;
+}
+body .looding.complete:hover {
+  background: #dc143c;
+  color: #ffffff;
+}
+body .looding.looding:hover {
+  background: #4169e1;
+  color: #ffffff;
+}
+body .looding.error:hover {
+  background: #008800;
+  color: #ffffff;
+}
+body .error {
+  width: 150px;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid #008800;
+  color: #008800;
+}
+body .error.complete:hover {
+  background: #dc143c;
+  color: #ffffff;
+}
+body .error.looding:hover {
+  background: #4169e1;
+  color: #ffffff;
+}
+body .error.error:hover {
+  background: #008800;
+  color: #ffffff;
+}

@@ -1,0 +1,86 @@
+버블 : 거품 // 방울
+ > 가볍다 > 위로
+ > 보통의 일반적인 경우에는 대부분 이벤트 버블링
+ > event.target => article (* 실제 이벤트가 발생된 지점)
+ > event.curentTaeget => (* 실제 이벤트 발생 후 이벤트 경유되고 있는 지점)
+
+ > 이벤트의 성격에 따라서 버블링을 적용X
+- mouseenter 이벤트 버블링
+-
+
+-------------------------------------------
+SCSS
+
+html, css > 에러투성이 나의 코드
+> 어디서 무엇이 잘못되었는지... 
+컴파일어
+
+SCSS의 중요문법 VS css에서 사용할 수 없었던 문법
+
+1. @at-root : 부모선택자 내 중첩상태에서 밖으로 나가는 
+
+2. variable  : 굳이 root 및 var() 불필요
+$main-red-color: #f00;
+color : $main-red-color;
+
+3. @import : 굳이 url () 경로 불필요
+직ㅈ버 경로 주소 입력가능
+@import "./styles/variables.scss";
+
+4. JS산술연산자 사용가능 : + - *  / % 모두 사용가능
+기존 VS css  calc ( ) 사용 안해도 됨 
+
+5. @mixin / @include 스타일 그룹 설정 : 반복 및 공통적으로 사용될 것으로 판단 되는 스타일을 하나 정의해놓고 그때그때마다 가져다가 사용가능
+
+@mixin notice-button { => 공통스타일 정의 이름설정
+  width: 150px;
+  height: 100%;
+  background: $main-light-color;
+}
+.complete {
+    @include notice-button; => 공통스타일 불러오기
+
+=>각각의 스타일이 메인이고 거기에 공통 스타일을 서브로 적용 개념
+
+6. @exfend : 공통스타일이 메인 + 해당 스타일이 필요한 요소들을 불러모으는 방식
+
+7.@for : 반복문을 사용할 수 있음
+
+8. map-get: 객체 사용기능
+
+$color: (
+  font-primary: #2d3436,
+  font-seco: #636e72,
+  font-focus: #d63031,
+  bg-primary: #dfefe9,
+  bg-seco: #b2bec3,
+);
+
+$fontsize: (
+  large: $main-font-size * 3,
+  medium: $main-font-size * 2,
+  normal: $main-font-size,
+  small: $main-font-size / 2,
+);
+
+$fontFamily: (
+  ko: "Noto Sans KR",
+  en: "Montserrat",
+);
+
+background: map-get($color, bg-primary);
+  font-family: map-get($fontFamily, en);
+  .frame {
+    h1 {
+      color: map-get($color, font-focus);
+      font-size: map-get($fontsize, large);
+    }
+    p {
+      font-size: map-get($fontsize, medium);
+    }
+
+
+
+
+
+

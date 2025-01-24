@@ -1,0 +1,22 @@
+@import "./styles/variables.scss";
+@import "./styles/reset.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $main-font-size;
+}
+
+.frame {
+  border: 2px solid #000;
+  padding: 20px;
+  text-align: center;
+  // 최상위 루트를 기준으로 모든 heading을 찾아온다 => 공통으로 스타일 줘야할떄
+  @at-root.heading {
+    font-size: $main-font-size * 5; // 1.6rem * 5 => 산술연산자 사용가능
+    color: $main-red-color;
+    font-weight: normal;
+  }
+}
