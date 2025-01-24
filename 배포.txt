@@ -1,0 +1,96 @@
+fire base
+
+node에서 작동
+
+내 컴퓨터에 node설피
+
+확인법
+cmd
+node -v
+
+설치법
+node.js 다운로드 설치 
+
+fire base접속 회원가입 후 로그인 후 새로운 프로젝트 생성
+
+사이드메뉴 > 빌드 > 호스팅 > 시작하기
+
+파이어베이스 CLI 설치 : 
+ - 최초의 한번만 설치하면 됨
+ - 관리자 권한 실행으로 cmd 설정 후 설치
+
+예외 : 컴퓨터 시스템  
+설정 오류에 의해서 파이어 베이스 명령어를 인식하지 못하는 경우
+> 시스템 환경변수 접속 (window + R) > sysdm.cpl ,3  (시스템 속성 접속 명령어)
+환경변수 > 시스템변수 > 패스(path) > 편집 > 새로만들기 > 찾아보기 > C+user+앱데이터 + 로밍 + npm
+
+VS code > 터미널 > npm > node -v
+
+npm - 보안설정 해제
+powershell
+현재 로컬 컴퓨터에 보안정책 확인  : Get-ExecutionPolicy
+Restricted : 보안정책 엄격한 상태로 제한
+
+보안정책 변경 : Set-ExecutionPolicy RemoteSigned
+
+> 결론 우리의 powershell 보안정책 RemoteSigned 바뀌어야함
+
+- 시스템 환경변수 혹은 powershell 보안정책 변경된 이후에는 vscode껐다 키기
+
+
+
+프로젝트 초기화
+firebase login
+
+로그인
+
+실제배포 세팅 : firebase init
+호스팅
+poblic > n > n > 초기화완료
+ 
+poblic폴더 안에 들어있는 파일 지우기
+배포 파일 선택후 poblic폴더 안에 넣기
+
+배포
+ firebase deploy
+
+>  https://flexproject-32e74.web.app
+
+최초배포 후 오류발견
+poblic폴더 안에 들어있는 파일 다 지우고 원본파일 수정하기
+수정 후 배포하고자 하는 파일 poblic폴더 안에 다시 넣고 firebase init 부터 다시하기
+캐시 값 지우기 :  ctrl + shift + R 
+
+------------------------------------------------------------
+
+배포 2
+ - netlify
+
+1) git에 파일 먼저 올리기----
+
+git init
+
+git remote add origin https://github.com/qkdy1935/flex-project.git  (연결)
+
+git add . (파인 선택 U -> A)
+
+git status  (파일롹인)
+
+git commit -m "first commit"
+
+git push origin master
+
+
+2) https://www.netlify.com/----
+
+Add new site
+-Import an existing project
+
+git-hub
+- 파일 선택
+
+사이트명 설정
+
+Deploy flexproject123
+
+flexproject123.netlify.app (*배포주소)
