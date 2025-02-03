@@ -1,0 +1,144 @@
+Js
+
+1. 변수
+
+2. 자료형
+
+3. 형변환
+
+4. 연산자
+
+5. 조건문
+
+6. 반복문
+
+7. 함수
+
+8. DOM
+
+
+브라우저에 출력할 레이아웃을 설계할 떄 -> table X(고전적 방식)
+- 반응형 정상 대응 불가
+
+ <input
+              id="prod-num"
+              class="input-box"
+              type="number"
+              name="prod-num"
+              min="1"   ->  최소값
+              value="1"  -> 증가값
+
+
+상품을 주문하는 페이지
+
+주문 정보닁 값을 찾아오고 싶을 떄
+
+dom = 현재 우리가 보고 있는 페이지 자바 스크립트 개체로 구조화
+document 
+
+document.querySelector("#order-name")
+console.log(document.querySelector("#order-name"));
+태그가 아닌 안에 입력된 값을 가져와야함
+
+document.forms
+form 안에 들어 있는 값들을 유사 계열로 가져옴
+
+목업데이터
+Mockup data
+
+프로그래밍 요소 중요한 역할 구분
+- Create : 쓰기
+- Read : 읽기
+- Update : 수정
+- Delete : 삭제
+
+submit- 서버로 값을 제출하는 속성값
+
+
+Local storage사용
+
+------------------------------------------------------------
+
+SCSS => css Compile sheet
+TS = Typescript => Javascript Compile Language
+
+html 파일 연결
+
+노드 기반에서 컴파일링
+node.js
+
+PS C:\Users\EZEN\Desktop\kdtfed\250203\TS-project> node -v
+v22.13.0
+PS C:\Users\EZEN\Desktop\kdtfed\250203\TS-project> npm -v
+10.9.2
+PS C:\Users\EZEN\Desktop\kdtfed\250203\TS-project> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (ts-project)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\Users\EZEN\Desktop\kdtfed\250203\TS-project\package.json:
+
+{
+  "name": "ts-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+
+
+Is this OK? (yes)
+
+PS C:\Users\EZEN\Desktop\kdtfed\250203\TS-project> 
+
+=> package.json 생정
+
+ npm init -y (질문없음)
+
+
+ 패키지 노드 설치
+
+ npm i @types/node
+
+=> node_modules 파일생성
+
+package-lock.json (*파일 삭제 xxx)
+-
+------------------------------------------------------
+
+전역 사용
+npm i @types/node -g
+
+----------------------------
+
+컴파일러 해주는 파일 패키지 매니저
+npm i typescript
+
+용량 커짐으로 작업 후 node_modules 파일삭제
+
+=> node_modules 파일 다시 받기
+터미널에서 npm i 
+파일 다시 생성
+
+
+
+
