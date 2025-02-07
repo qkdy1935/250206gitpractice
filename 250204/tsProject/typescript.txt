@@ -1,0 +1,80 @@
+TS
+
+ 1. npm -v
+
+2.  npm init -y
+
+3. npm i @types/node 
+= package.json => "main": "index.js", =>  "main": "script.js", (수정하기
+
+ 4. npm i typescript = typescript설치
+
+npm i typescript -g =글로벌 전역 설치
+
+5. tsc -v
+= 맥인 경우 수두 붙이기 강제설치
+
+= window >관리자 권한
+get-help Set-ExecutionPolicy 입력
+y입력
+
+set-ExecutionPolicy RemoteSigned 입력 모드로 바꾸기
+
+6.  tsc script.ts = script.js 컴파일링 파일 생성
+
+TS 중복되는 변수 생성 불가
+옵션 설정 > 단독적인 변수로 변경
+
+컴파일러 옵션 설정
+tsc --init 
+tsconfig.json 파일 생성
+tsconfig.json  내용 삭제 
+{
+  "include": ["src"] //src파일을 찾아와서 컴파일링
+}
+
+
+
+컴파일링 파일 src폴더 안에 별도 보관
+폴더 안에 컴파일리 파일 생성 =>  tsc rsc/script.ts
+
+7. npm i tsx
+맥 = npm i tsx -g
+윈도우 오류  =>  npm i tsx -g 
+
+8.  tsx -v
+
+
+const str = "Hello World";
+console.log(str);
+
+tsx src/script.ts
+Hello World  => 실행
+
+tsx src/script.ts
+tsc rsc/script.ts  동시 사용
+
+package.json 파일 안에
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts_node": "tsc && tsx src/script.ts" <= 추가하기
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

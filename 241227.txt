@@ -1,0 +1,135 @@
+margin : 특정요소의 외부여백을 설정하는 속성
+
+
+padding : 안에 공간 여백
+
+margin & padding  : 1개
+상하좌우 모두 동일하게 하나의 값으로 통일
+
+margin & padding  : A B (2개)
+상하의 가뵤은 A의 값 과우는 B의 값
+
+margin & padding  : A B C (3개)
+상의 값은 A, 좌우는 B, 하의 값은 C
+
+margin & padding  : A B C D (4개)
+상부터 시계(상-우-하-좌) 방량으로 값을 각각 따로 적용
+ 
+
+-----공통적 스타일 @mixin ------>@include buttonstyle;
+@mixin buttonstyle {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  background: map-get($contents-color, btncolor);
+  text-align: center;
+  color: map-get($contents-color, textcolor);
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+------------>@include 
+.btn {
+ @include buttonstyle;
+ background: map-get($contents-color, bgcolcr);
+
+
+---------------------------------------------------------------------------
+git-hub
+> coomit history
+
+특정날짜에 해당되는 데이터를 내려받는 방법
+> git hub사용방법
+
+EZEN@DESKTOP-675AFQ8 MINGW64 ~/Desktop/git (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/EZEN/Desktop/git/.git/
+
+EZEN@DESKTOP-675AFQ8 MINGW64 ~/Desktop/git (master)
+$ git remote add origin https://github.com/Divjason/kdtfed-241219.git
+
+EZEN@DESKTOP-675AFQ8 MINGW64 ~/Desktop/git (master)
+$ git remote -v
+origin  https://github.com/Divjason/kdtfed-241219.git (fetch)
+origin  https://github.com/Divjason/kdtfed-241219.git (push) 
+
+EZEN@DESKTOP-675AFQ8 MINGW64 ~/Desktop/git (master)
+$ git fetch
+remote: Enumerating objects: 87, done.
+remote: Counting objects: 100% (87/87), done.
+remote: Compressing objects: 100% (64/64), done.
+remote: Total 87 (delta 20), reused 79 (delta 12), pack-reused 0 (from 0)
+Unpacking objects: 100% (87/87), 3.18 MiB | 10.69 MiB/s, done.
+From https://github.com/Divjason/kdtfed-241219
+ * [new branch]      master     -> origin/master
+
+$ git checkout origin/master 241226 (가져올 파일 이름)
+
+git remote -v
+(git -hub > repository (원격저장소와 로컬 컴퓨터안에 있는 .git가
+정상적으로 연결되었는지 확인하게 해주는 명령어
+
+fetch : 서버에 존재하는 데이터를 client 측에서 가져와서 사용할수 있도록 해주는 함수
+
+push : 내 컴퓨터에 존재하는 데이터를 원격저장소로 내보낼 수 있게 해주는 역할
+
+git push origin master
+
+git fetch : 원격 저장소 내 데이터를 찾아왹전 원격 저장소에 커밋되어진
+데이터를 최신데이터 정보로 업데이트 해주는 명령어
+
+git checkout origin/master 241226 (가져올 파일 이름)
+
+-------------------------------------------------------------------
+
+cmd 관리자 권한 실행
+git-v
+
+깃소유주 정보
+git config --list
+
+깃소유주 정보 등록
+git config --globel user.name " "
+git config --globel user.emil " "
+git config --list (소유주 정보 조회)
+
+git-hub 안에 배포하고자 하는 배포전용 repository 생성
+
+git bash
+1. git init : 깃 초기화 
+(git init명령어 : 현재폴더에서 버전관리를 해당 폴더를 기준으로 하겠다)
+
+2. git remote add origin 주소 : 해당 repository 주소연결
+
+3. git remote -v : 로컬 원결 연결확인
+
+4. git add . : 파일 선택
+
+5. git status : 파일 확인
+
+6. git commit -m "firstcommit" : "firstcommit"  아룸으로 커밋
+
+7. git push origin master : 데이터 올리기
+
+
+
+--------------------------------------------------------------
+
+
+
+smart animate
+- 피그마의 프로토타입의 가장 최신 기능 중 하나
+- 반드시 레이아웃 속성구조가 인치해야합니다.
+- 프레임 및 그룹 등의 레이어의 이름과 동일해야 합니다.
+
+
+prototype(프로토타입) 프레입을 이동한다는 특징
+
+
+
+
+
+
+
+
+
