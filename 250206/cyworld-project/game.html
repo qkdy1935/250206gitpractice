@@ -15,9 +15,38 @@
           <div class="subtitle">TODAY CHOICE</div>
         </div>
         <div class="header-line"></div>
-        <section class="game-container">
-          <img src="" alt="" />
-        </section>
+      </section>
+      <section class="game-container">
+        <img src="./contents/word.png" alt="word" />
+        <div class="game-title">끝말잇기</div>
+        <div class="game-subtitle">제시어 : <span id="word">산기슭</span></div>
+        <div class="word-text">
+          <form name="word-game" action="#" method="get">
+            <input
+              id="myword"
+              class="textbox"
+              name="myword"
+              type="text"
+              placeholder="단어를 입력하세요"
+            />
+            <input id="serch" type="submit" value="입력" />
+          </form>
+        </div>
+        <div id="result" class="world-result">결과!</div>
+      </section>
+      <section class="game-container">
+        <img src="./contents/lotto.png" alt="lottogame" />
+        <div class="game-title">LOTTO</div>
+        <div class="game-subtitle">클릭해주세요!</div>
+        <div class="game-lotton-number">
+          <span>START!</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <button class="lotto-btn">클릭!</button>
       </section>
     </main>
   </body>

@@ -147,7 +147,7 @@ html {
     color: map-get($map: $color, $key: light);
     text-align: center;
     line-height: 30px;
-    border: 1px solid map-get($map: $color, $key: dark);
+    border: 1px solid map-get($map: $color, $key: gray);
     border-radius: 0 10px 10px 0;
     font-size: 1.6rem;
     cursor: pointer;
