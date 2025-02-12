@@ -78,7 +78,7 @@ body {
   opacity: 0;
   cursor: pointer;
   transition: opacity 0.3s;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 #music-player .controls .buttons {
   display: flex;

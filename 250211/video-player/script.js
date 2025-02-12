@@ -1,7 +1,7 @@
 const playBtn = document.querySelector(".play-pause");
+const player = document.querySelector("#music-player");
 const video = document.querySelector("video");
 const progressCover = document.querySelector(".progress");
-console.log(progressCover);
 const volumeBar = document.querySelector("input[type='range']");
 const full = document.querySelector(".fullscrren");
 const rateBtns = document.querySelectorAll(".rate");
@@ -61,6 +61,18 @@ const undateprogress = () => {
   progressPointer.style.left = `${newPosition}px`;
 };
 
+// 재생바 포인트
+const videoPoint = (e) => {
+  // console.log(e.pageX);
+  // console.log(player.offsetLeft);
+  const mouseX = e.pageX - player.offsetLeft;
+  // console.log(mouseX);
+  const progressBarWidth = progressCover.clientWidth;
+  const duration = video.duration;
+  const clickPoint = (mouseX / progressBarWidth) * duration;
+  video.currentTime = clickPoint;
+};
+
 // 소리조절
 const setVolum = (e) => {
   video.volume = e.target.value;
@@ -73,15 +85,28 @@ const setRate = (e) => {
 };
 
 playBtn.addEventListener("click", togglePlay);
-video.addEventListener("click", togglePlay);
+video.addEventListener("pointerdown", togglePlay);
 video.addEventListener("timeupdate", updateTime);
 video.addEventListener("timeupdate", undateprogress);
 volumeBar.addEventListener("chang", setVolum);
+progressCover.addEventListener("click", videoPoint);
+
 rateBtns.forEach((button) => {
   button.addEventListener("click", (e) => {
     setRate(e);
   });
 });
+
+// 전체화면
 full.addEventListener("click", () => {
   video.requestFullscreen();
+});
+
+document.addEventListener("fullscreenchange", () => {
+  if (document.fullscreenElement) {
+    document.addEventListener("pointerdown", togglePlay);
+  } else {
+    document.removeEventListener("pointerdown", togglePlay);
+    video.addEventListener("pointerdown", togglePlay);
+  }
 });
