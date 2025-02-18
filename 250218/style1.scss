@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chareter {
+  width: 100px;
+  height: 100px;
+  background: url(./e1503d1d6fa494acc9420a140430e329.png) center/95% no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #f00;
+}

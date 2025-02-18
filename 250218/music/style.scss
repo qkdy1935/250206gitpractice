@@ -1,0 +1,348 @@
+@import "./styles/reset.scss";
+@import "./styles/variabless.scss";
+
+@mixin leftBtn {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: map-get($map: $c, $key: light);
+  position: absolute;
+  left: 0;
+  transform-origin: left center;
+  transition: all 0.5s;
+}
+
+@mixin rightBtn {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: map-get($map: $c, $key: light);
+  position: absolute;
+  right: 0;
+  transform-origin: right center;
+  transition: all 0.5s;
+}
+
+@mixin btnStyle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+figure {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; //스크롤바 생기지않게 사용
+  position: relative;
+  // 배경이미지를 API를 사용해서 변경할거지만 중간에 사진이 안들어올것을 예방하여 백그라운드 컬러 넣기
+  background: linear-gradient(#74ebd5 0%, #acb6e5 100%);
+
+  // <!-- 상단 왼쪽 -->
+  & > h1 {
+    position: absolute;
+    top: 7vh;
+    left: 4vw;
+    // 태그가 가지고 있는 기본적인 속성 제거
+    font-size: 0;
+    // 원하는 스타일 넣기
+    strong {
+      font: bold 3.6rem/1.4 "arial";
+      letter-spacing: 1px;
+      color: map-get($map: $c, $key: light);
+    }
+    span {
+      display: block;
+      font: normal 1.2rem/1 "arial";
+      letter-spacing: 1px;
+      color: map-get($map: $c, $key: light);
+      opacity: 0.8;
+      text-align: center;
+    }
+  }
+
+  // <!-- 상단 오른쪾 메뉴 바 -->
+  .menu {
+    position: absolute;
+    top: 8vh;
+    right: 4vw;
+    color: map-get($map: $c, $key: light);
+    font-size: 2.4rem;
+  }
+
+  // <!-- 하단 중앙 -->
+  & > p {
+    position: absolute;
+    bottom: 7vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: map-get($map: $c, $key: light);
+    letter-spacing: 2px;
+    opacity: 0.8;
+    font: normal 1.2rem/1 "arial";
+  }
+
+  // <!-- 컨텐츠 -->
+  section {
+    border: 1px solid aqua;
+    width: 20vw;
+    height: 65vh;
+    // 화면 바깥으로 컨텐츠가 돌아가면서 보여야 하기 떄문에 플렉스 사용X
+    position: absolute;
+    // top: 50%;
+    top: 140%; // 위치 이동
+    left: 50%;
+    // 회전  transform: translate 사용하게 되면 복잡해짐 (먼저 사용순으로 사용 중첩됨
+    // 먼저 사용하는 값에 따라 결과물이 달라짐
+    // 회전할때 transform 사용
+    // margin을 이용한 위치 이동 translateX , Y와 사용 똑같음
+    margin-left: -10vw;
+    // margin-top: -32vh;
+    margin-top: -25vh; // 위치 이동
+
+    // <!-- 8개의 박스 -->
+    article {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      // 하나로 겹쳐놓고 시작
+
+      // 화살표를 사용하여 가운데 들어오는 아이템에 가상클래스를 줘서 관리
+      &.on {
+        .inner {
+          // (hover후 스타일 가상클래스를 사용하여 확인)
+          opacity: 0.9;
+          transform: scale(1.1);
+        }
+      }
+
+      // <!-- 8개의 박스 안의 내용 -->
+      .inner {
+        width: 100%;
+        height: 100%;
+        background: map-get($map: $c, $key: inner);
+        padding: 5vh 2.5vw 8vh;
+        display: flex; // 가로정렬
+        justify-content: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.1);
+        // 오버 했을떄 사이즈가 커지고 진했으면 함 (hover전 스타일)
+        opacity: 0.6;
+        transform: scale(0.8);
+
+        // 바뀔떄 부드럽게 스타일 전홤
+        transition: opacity 1s transform 1s;
+
+        //  <!-- 앨범 이미지 -->
+        .pic {
+          // 너비 와 높이 기준이 다를떄 정원을 그리는 방법
+          // 전체 보여지는 상태일떄 = %
+          // 현재 보여지는 상태에서의 vw
+          // 가로와 세로 모두 사용 vw , vh
+          width: 15vw;
+          height: 15vw; // 같이 사용가능
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          position: relative;
+          display: flex; //수직 정렬
+          justify-content: center;
+          align-items: center;
+          // 스크립트 통해서 이미지 불러오기
+          background: no-repeat;
+          background-position: center;
+          background-size: cover; // 이미지 스타일 미리 정의해놓기
+
+          // 전후 문자를 사용해서 회전 과 그림자
+          &::before,
+          &::after {
+            content: "";
+            width: inherit; // inherit = 상속
+            height: inherit;
+            border-radius: 50%;
+            position: absolute; // 원하는 위치에 회전
+            top: 0;
+            left: 0;
+            background-image: inherit;
+            background-position: inherit;
+            background-size: inherit;
+            background-repeat: inherit;
+          }
+          &::before {
+            content: "";
+            transform: translateY(10%);
+            filter: blur(20px) brightness(1.6);
+          }
+          // 버튼이 클릭되었을때 이미지 애니메이션 가상클래스
+          &.on::after {
+            animation: ani 4s linear infinite;
+          }
+          &.on::before {
+            animation: ani2 4s linear infinite;
+          }
+
+          // 이미지 중앙 동그라미
+          .dot {
+            width: 3vw;
+            height: 3vw;
+            background: map-get($map: $c, $key: dot);
+            position: relative;
+            z-index: 3;
+            border-radius: 50%;
+            // inset = 이너 섀도우
+            box-shadow: inset 5px 5px 10px rgba($color: #000000, $alpha: 0.1);
+          }
+        }
+
+        .text {
+          text-align: center;
+          h2 {
+            font-size: 2rem;
+            color: map-get($map: $c, $key: title);
+          }
+          p {
+            font-size: 1.2rem;
+            margin: 2vh 0 3vh;
+            color: map-get($map: $c, $key: desc);
+          }
+
+          ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+              opacity: 0.6;
+              cursor: pointer;
+              transition: all 0.5s;
+              transform: 0.5s;
+              &.play {
+                transform: scale(1.5);
+                opacity: 0.9;
+                &:hover {
+                  transform: scale(2);
+                  opacity: 1;
+                }
+              }
+              &:hover {
+                opacity: 1;
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+      }
+    }
+    // 다음 박스로 넘어갈때 자연스럽게 넘어가기
+    transition: all 1s;
+  }
+
+  // <!-- 버튼 -->
+  .btnprev {
+    @include btnStyle;
+    left: 50%;
+    transform: translate(-20vw, -50%);
+    text-align: left;
+    &:hover {
+      // 호버했을떄 위치이동을 이용하여 화살표 < 모양 만들기
+      span {
+        opacity: 0;
+        transform: translate(100%);
+      }
+      &::before {
+        transform: rotate(-30deg);
+      }
+      &::after {
+        transform: rotate(30deg);
+      }
+    }
+    span {
+      color: map-get($map: $c, $key: light);
+      font: normal 1.2rem/1 "arial";
+      opacity: 1;
+      transform: translateX(30%);
+      transition: all 0.5s;
+    }
+    // 라인 그리기
+    &::before {
+      @include leftBtn;
+      top: 50%;
+      transform: rotate(-180deg);
+    }
+    &::after {
+      @include leftBtn;
+      bottom: 50%;
+      transform: rotate(180deg);
+    }
+  }
+
+  .btnnext {
+    @include btnStyle;
+    right: 50%;
+    transform: translate(20vw, -50%);
+    text-align: right;
+    &:hover {
+      // 오버했을떄 위치이동을 이용하여 화살표 > 모양 만들기
+      span {
+        opacity: 0;
+        transform: translate(-100%);
+      }
+      &::before {
+        transform: rotate(30deg);
+      }
+      &::after {
+        transform: rotate(-30deg);
+      }
+    }
+    span {
+      color: map-get($map: $c, $key: light);
+      font: normal 1.2rem/1 "arial";
+      opacity: 1;
+      transform: translateX(-30%);
+      transition: all 0.5s;
+    }
+    // 라인 그리기
+    &::before {
+      @include rightBtn;
+      top: 50%;
+      transform: rotate(180deg);
+    }
+    &::after {
+      @include rightBtn;
+      bottom: 50%;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+// 앨범 이미지
+@keyframes ani {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// 전후 문자를 사용해서 만든 앨범 그림자
+@keyframes ani2 {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10%) rotate(360deg);
+  }
+}

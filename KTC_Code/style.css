@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#main_section {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #f00;
+}
+
+#second_section {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #f00;
+}
+
+#third_section {
+  width: 700px;
+  height: 700px;
+  border: 1px solid #f00;
+}
