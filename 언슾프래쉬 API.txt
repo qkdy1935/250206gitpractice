@@ -1,0 +1,40 @@
+API = Application Programming Interface
+=> 데이터
+
+정말 완전 초심자
+- 개발 밀 퍼블리싱을 많이 안해본 사람의 경우
+
+상세기술서 // 기능정의서
+> 
+
+API사용
+
+- 언스플래쉬 
+https://unsplash.com/oauth/applications/711567
+// https://github.com/unsplash/unsplash-js - 사용방법
+
+key 사용
+이미지 사욜방법
+이미지 찾아오는 URL - 1개씩 찾아옴
+https://api.unsplash.com/photos/?client_id=YOUR_ACCESS_KEY
+
+Get a random photo  
+- 이미지 여러개 들올떄 = random추가 
+새로고침 할떄마다 이미지 변경 
+https://api.unsplash.com/photos/random/?client_id=YOUR_ACCESS_KEY 
+
+tbO6NotVDXbWvp1bTkJZ9N99ufKCibRf-rNX6Av8J_c
+
+환경변수
+inv.js = 환경변수 
+
+export
+
+.gitignore
+깃에 올리지 않는 파일
+
+
+
+
+
+

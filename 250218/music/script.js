@@ -39,12 +39,43 @@ lists.forEach((list) => {
   // closest는 DOM에서 가장 가까운 상위 요소를 찾을 때 사용하는 메서드
   // 음악 재생 , 멈춤, 처음부터
   play.addEventListener("click", (e) => {
+    // 특정 클래스 값 활성화
+    const ndActive = e.currentTarget
+      .closest("article")
+      .classList.contains("on");
+
+    if (active) {
+      const activePic = e.currentTarget
+        .closest("article")
+        .querySelector(".pic");
+
+      const ativeAudio = e.currentTarget
+        .closest("article")
+        .querySelector("audio");
+
+      activePic.classList.add("on");
+      ativeAudio.play();
+    }
+
     e.currentTarget
       .closest("article")
       .querySelector(".pic")
       .classList.add("on");
 
     e.currentTarget.closest("article").querySelector("audio").play();
+
+    // 오디오가 음악이 끝나면 앨범이 돌아가는것도 ㅓㅁ춰야함ㅁ
+
+    e.currentTarget
+      .closest("article")
+      .querySelector("audio") // endied = 오디오 종료 이벤트
+      .addEventListener("endied", () => {
+        // e.currentTarget
+        //   .closest("article")
+        //   .querySelector(".pic")
+        //   .classList.remove("on");
+        activePic.classList.add("on");
+      });
   });
 
   pause.addEventListener("click", (e) => {

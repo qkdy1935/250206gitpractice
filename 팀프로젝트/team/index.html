@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/2245690d2b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>PAGE</title>
+  </head>
+  <body>
+    <!-- 상단 바 -->
+    <header>
+      <!-- 헤더전체 -->
+      <div class="header-inner">
+        <!-- 헤더 로고 (왼쪽) -->
+        <div class="header-logo-box">
+          <a href="#">
+            <img src="./imgs/logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <!-- 헤더 네비게아션 바 (중앙) -->
+        <div class="header-nav-bar">
+          <ul>
+            <li class="nav-bar">
+              <a id="home" href="#">홈</a>
+            </li>
+            <li class="nav-bar">
+              <a id="movie" href="#">영화</a>
+            </li>
+            <li class="nav-bar">
+              <a id="drama" href="#">드라마</a>
+            </li>
+            <li class="nav-bar">
+              <a id="show" href="#">에능</a>
+            </li>
+            <li class="nav-bar">
+              <a id="new" href="#">NEW</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 헤더 아이콘 박스 (오른쪽) -->
+        <div class="items">
+          <div class="items-box">
+            <div class="search">
+              <!-- 검색 아이콘 -->
+              <div class="search-text">
+                <p>search</p>
+              </div>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" />
+            </div>
+            <!-- 하트 아이콘 -->
+            <div class="likes">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <!-- 프로필 아이콘 -->
+            <div class="user">
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+          <!-- 프로필 아이콘 눌렀을때 문의하기, 로그아웃 박스 생성 -->
+          <div class="user-box">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-solid fa-exclamation"></i>문의하기</a>
+              </li>
+              <hr />
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i
+                  >로그아웃</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 배너
+    <div id="main-banner-con">
+      <div class="main-banner-btns">
+        <button class="banner-btn-r">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <button class="banner-btn-l">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+      </div>
+      <div class="main-banner">
+        <div class="left-item">
+          <div class="img-bg"><img src="" alt="bg" /></div>
+          <div class="img"><img src="" alt="img" /></div>
+          <div class="banner-text-box">
+            <div class="banner-content-logo"></div>
+            <div class="title-text-box">
+              <span class="text-cicle">영화</span>
+              <span class="text-cicle">판타지</span>
+              <span>Along with the Gods: The Last 49 Days • 2018</span>
+            </div>
+            <div class="banner-btn">
+              <button class="play"><i class=""></i>재생하기</button>
+              <button class="pick"><i class=""></i>찜하기</button>
+            </div>
+            <div class="sub-text-box">
+              <span>2018</span>
+              <span>신과 함께 - 인과 연</span>
+              <span>141분</span>
+              <span>평점 별 넣기</span>
+            </div>
+            <div class="inner-text-box">
+              <p>
+                천 년 동안 48명의 망자를 환생시킨 저승 삼차사, 한 명만 더
+                환생시키면 그들도 새로운 삶을 얻을 수 있다. 하지만
+                강림(하정우)은 원귀였던 수홍(김동욱)을 자신들의 마지막 귀인으로
+                정하는 이해할 수 없는 선택을 한다. 저승법 상 원귀는 소멸되어야
+                마땅하나 염라대왕(이정재)은 저승 삼차사에게 새로운 조건을 내걸며
+                강림의 제안을 수락한다.
+              </p>
+            </div>
+          </div>
+          <div class="right-item">
+            <audio class="audio-but">
+              <i class=""></i>
+            </audio>
+            <div>
+              <div>18 +</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main></main> -->
+
+    <footer>
+      <div class="footer01">
+        <div class="footer01-left-link">
+          <ul ul class="footer-links">
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">광고/제휴문의</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">미디어센터</a></li>
+            <li><a href="#">법적고지</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">문의하기</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </div>
+        <!-- 오른쪽 -->
+        <div class="footer-input">
+          <select class="input-language" name="language" id="language">
+            <option value="#">KO</option>
+            <option value="#">EG</option>
+          </select>
+
+          <select class="input-service" name="service" id="service">
+            <option value="#">연관 서비스</option>
+            <option value="#">관련 서비스</option>
+            <option value="#">힘내는 서비스</option>
+            <option value="#">우울한 서비스</option>
+          </select>
+
+          <select class="input-site" name="site" id="site">
+            <option value="#">패밀리 사이트</option>
+            <option value="#">친구 사이트</option>
+            <option value="#">학교 사이트</option>
+            <option value="#">가족 사이트</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer02">
+        <div class="footer02-left">
+          <img src="./imgs/logo.png" alt="logo" />
+          <div class="footer-text">
+            <p>시청자 상담실 (문의 및 시청자 의견) : <b>123-123-1234</b></p>
+            <p>
+              (주)케이티씨콘텐츠 : 오승덕, 김윤주, 황예진, 홍민주
+              <b>123-123-1234</b>
+            </p>
+            <p>
+              <span
+                >본점 : 서울특별시 서초구 서초대로77길 41 대동2빌딩 9층</span
+              >
+              <span>사업자 등록번호 : 123-45-6789</span>
+              <span>공정거래위원회 웹사이트</span>
+            </p>
+          </div>
+        </div>
+        <div class="footer-sns">
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-youtube"></i></a>
+          <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
