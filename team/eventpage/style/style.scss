@@ -1,0 +1,137 @@
+@import "./reset.scss";
+@import "./Variable.scss";
+
+/*==============  이벤트 페이지 구현하기  ============*/ 
+body{
+    width: 100%;
+    height: 6013px;
+    background: url("../img/bg.png"), rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-position: center -200px ;
+}
+
+@mixin Common{
+
+}
+// 헤더 부분 끝
+header{
+    width: 1920px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: map-get($map: $color, $key: dark);
+    
+    .header_w{
+        width: 1160px;
+        display: flex;
+        .header_w_inner{
+            width: 100%;
+            color:#fff;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0; 
+
+            /*구분을 짓기 위해서 옛날 방식을 적용함 img.logo*/    
+            img.logo{
+                display: inline-block;            
+            }
+            ul.header_txt, .header_right{
+                display: inline-block;
+                width: auto;
+                display: flex;
+                align-items: center;
+            
+            & > li{            
+                margin-left: 30px;
+            }
+            & >li:last-child(){
+                margin-left: 0;
+            }        
+            li>a:hover{
+                transition: all 0.5s ease-in-out;
+                transform: scale(1.1);
+                color: map-get($map: $color, $key: main_color);
+                }
+            }
+        }
+    }
+}
+
+section, footer{
+    width: 1920px;
+    // height: 1500px;
+    // border: 1px solid #f00;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color:#010D2B ;
+    
+    .article{
+        display: flex;
+        width: 1160px;
+        justify-content: center;      
+        border: 1px solid #fff;
+        padding: 80px 0;
+        
+
+        .article_inner{
+            text-align: center;
+            h1{
+                margin: 100px 0;
+                font-size: 100px;
+                display: block;
+                color: #fff;
+            }
+            h4{
+                font-size: 50px;
+                color:map-get($map: $color, $key: sub_color);
+                
+            }
+            h3{
+                padding: 15px 0;
+                font-size: 25px;
+                color:map-get($map: $color, $key: light);
+            }
+            ul.person{
+                margin-top: 2rem;
+                display: flex;
+                gap: 10px;
+
+                li > img{
+                    width: 350px;
+                    height: 450px;                    
+                    border-radius: 20px;
+                }
+            }
+        }
+
+    }
+}
+
+footer{
+    width: 1920px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    background-color:hsl(0, 0%, 26%) ;
+    color: #fff;
+
+    .f_warpper{
+
+    .footer_top{
+        width: 1160px;
+        display: flex;
+        img{
+            display: inline-block;
+            width: inherit;
+        }
+
+    .footer_w_inner{
+        width: 1160;
+        background: #000;
+    }
+  }
+}
+}

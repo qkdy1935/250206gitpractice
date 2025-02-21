@@ -1,0 +1,131 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+/*==============  이벤트 페이지 구현하기  ============*/
+body {
+  width: 100%;
+  height: 6013px;
+  background: url("../img/bg.png"), rgba(255, 255, 255, 0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-position: center -200px;
+}
+
+header {
+  width: 1920px;
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background: #000;
+}
+header .header_w {
+  width: 1160px;
+  display: flex;
+}
+header .header_w .header_w_inner {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  /*구분을 짓기 위해서 옛날 방식을 적용함 img.logo*/
+}
+header .header_w .header_w_inner img.logo {
+  display: inline-block;
+}
+header .header_w .header_w_inner ul.header_txt, header .header_w .header_w_inner .header_right {
+  display: inline-block;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+header .header_w .header_w_inner ul.header_txt > li, header .header_w .header_w_inner .header_right > li {
+  margin-left: 30px;
+}
+header .header_w .header_w_inner ul.header_txt > li:last-child(), header .header_w .header_w_inner .header_right > li:last-child() {
+  margin-left: 0;
+}
+header .header_w .header_w_inner ul.header_txt li > a:hover, header .header_w .header_w_inner .header_right li > a:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.1);
+  color: #D90000;
+}
+
+section, footer {
+  width: 1920px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: #010D2B;
+}
+section .article, footer .article {
+  display: flex;
+  width: 1160px;
+  justify-content: center;
+  border: 1px solid #fff;
+  padding: 80px 0;
+}
+section .article .article_inner, footer .article .article_inner {
+  text-align: center;
+}
+section .article .article_inner h1, footer .article .article_inner h1 {
+  margin: 100px 0;
+  font-size: 100px;
+  display: block;
+  color: #fff;
+}
+section .article .article_inner h4, footer .article .article_inner h4 {
+  font-size: 50px;
+  color: #003CC2;
+}
+section .article .article_inner h3, footer .article .article_inner h3 {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #fff;
+}
+section .article .article_inner ul.person, footer .article .article_inner ul.person {
+  margin-top: 2rem;
+  display: flex;
+  gap: 10px;
+}
+section .article .article_inner ul.person li > img, footer .article .article_inner ul.person li > img {
+  width: 350px;
+  height: 450px;
+  border-radius: 20px;
+}
+
+footer {
+  width: 1920px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: hsl(0, 0%, 26%);
+  color: #fff;
+}
+footer .f_warpper .footer_top {
+  width: 1160px;
+  display: flex;
+}
+footer .f_warpper .footer_top img {
+  display: inline-block;
+  width: inherit;
+}
+footer .f_warpper .footer_top .footer_w_inner {
+  width: 1160;
+  background: #000;
+}/*# sourceMappingURL=style.css.map */
