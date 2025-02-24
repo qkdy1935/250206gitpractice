@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/indexstyle.css" />
+    <script defer src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2eb1e2e5f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <main id="container">
+      <!-- 상단 바 -->
+      <header>
+        <div class="header-inner">
+          <!-- 헤더 로고 (왼쪽) -->
+          <div class="header-logo-box">
+            <a href="#">
+              <img src="./imgs/logo.png" alt="logo" />
+            </a>
+          </div>
+          <!-- 헤더 네비게이션 바 (중앙) -->
+          <div class="header-nav-bar">
+            <ul>
+              <li id="home" class="nav-bar">
+                <a href="./index.html">홈</a>
+              </li>
+              <li class="nav-bar">
+                <a id="movie" href="./movie.html">영화</a>
+              </li>
+              <li class="nav-bar">
+                <a id="drama" href="#">드라마</a>
+              </li>
+              <li class="nav-bar">
+                <a id="show" href="#">에능</a>
+              </li>
+              <li class="nav-bar">
+                <a id="new" href="./event.html">EVENT</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 헤더 아이콘 박스 (오른쪽) -->
+          <div class="items">
+            <div class="items-box">
+              <div class="search">
+                <!-- 검색 아이콘 -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="검색어를 입력하세요." />
+              </div>
+              <!-- 하트 아이콘 -->
+              <div class="likes">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <!-- 프로필 아이콘 -->
+              <div class="user">
+                <i class="fa-regular fa-user"></i>
+              </div>
+            </div>
+            <!-- 프로필 아이콘 눌렀을때 문의하기, 로그아웃 박스 생성 -->
+            <div class="user-box">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fa-regular fa-circle-question"></i>문의하기</a
+                  >
+                </li>
+                <hr />
+                <li>
+                  <a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    로그아웃</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="home-01" class="home-style">
+        <a href="#"><img src="./imgs/main01.png" alt="main01" /></a>
+      </section>
+
+      <section id="home-02" class="home-style">
+        <h2>매일매일 달라지는 <span>오늘의 실시간 인기순위 TOP 10</span></h2>
+        <article class="article-inner">
+          <div class="article-centent">
+            <a href="#"><img src="./imgs/s01.png" alt="s01" /></a>
+            <h3>나는 솔로</h3>
+            <span>예능</span>
+            <p>2021</p>
+          </div>
+          <div class="article-centent">
+            <a href="#"><img src="./imgs/s02.png" alt="s02" /></a>
+            <h3>그해 우리는</h3>
+            <span>드라마</span>
+            <p>2021</p>
+          </div>
+          <div class="article-centent">
+            <a href="#"><img src="./imgs/s03.png" alt="s03" /></a>
+            <h3>모범택시</h3>
+            <span>드라마</span>
+            <p>2021</p>
+          </div>
+          <div class="article-centent">
+            <a href="#"><img src="./imgs/s04.png" alt="s04" /></a>
+            <h3>나혼자산다</h3>
+            <span>예능</span>
+            <p>2021</p>
+          </div>
+          <div class="article-centent">
+            <a href="#"><img src="./imgs/s05.png" alt="s05" /></a>
+            <h3>비공식 작전</h3>
+            <span>영화</span>
+            <p>2021</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="home-03" class="home-style">
+        <h2>
+          믿고 보는 K-콘텐츠 KTC가 강력 추천하는, <span>추천 작품</span>
+          <article>
+            <a href="#"><img src="./imgs/s2-01.png" alt="s2-s01" /></a>
+            <a href="#"><img src="./imgs/s2-02.png" alt="s2-s02" /></a>
+            <a href="#"><img src="./imgs/s2-03.png" alt="s2-s03" /></a>
+            <a href="#"><img src="./imgs/s2-04.png" alt="s2-s04" /></a>
+            <a href="#"><img src="./imgs/s2-05.png" alt="s2-s05" /></a>
+          </article>
+        </h2>
+      </section>
+      <section id="home-04" class="home-style">
+        <form action="#" method="post">
+          <select name="genre" id="genre-style">
+            <option value="select" disabled selected>
+              장르를 선택해 주세요
+            </option>
+            <option value="drama">드라마</option>
+            <option value="enter">예능</option>
+            <option value="movie">영화</option>
+          </select>
+          <div class="ifr">
+            <iframe src="./index-iframe.html" frameborder="0"></iframe>
+          </div>
+        </form>
+      </section>
+      <section id="home-05" class="home-05">
+        <div>
+          <a href="./event.html"
+            ><img src="./imgs/event-img.png" alt="event-img"
+          /></a>
+          <div>
+            <h2># 취향저격 연말 이벤트</h2>
+            <p>기간 : 2025.02.14 17:00:00 ~ 2025.03.01 23:59:00</p>
+            <p>기간 : 2025.02.14 17:00:00 ~ 2025.03.01 23:59:00</p>
+          </div>
+          <div>
+            <h2># 취향저격 연말 이벤트</h2>
+            <p>기간 : 2025.02.14 17:00:00 ~ 2025.03.01 23:59:00</p>
+            <p>조회 4,119 참여 1102</p>
+          </div>
+          <input type="button" value="보러가기 " /><img
+            src="./imgs/arr.png"
+            alt="arrow"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer01">
+        <div class="footer01-left-link">
+          <span><a href="#">회사소개</a></span>
+          <span><a href="#">광고/제휴문의</a></span>
+          <span><a href="#">이용약관</a></span>
+          <span><a href="#">개인정보 처리방침</a></span>
+          <span><a href="#">미디어센터</a></span>
+          <span><a href="#">법적고지</a></span>
+          <span><a href="#">이메일무단수집거부</a></span>
+          <span><a href="#">문의하기</a></span>
+          <span><a href="#">고객센터</a></span>
+        </div>
+        <!-- 오른쪽 드롭다운 -->
+        <div class="footer-input">
+          <select class="input-language" name="language" id="language">
+            <option value="#">KO</option>
+            <option value="#">EG</option>
+          </select>
+          <select class="input-service" name="service" id="service">
+            <option value="#">연관 서비스</option>
+            <option value="#">관련 서비스</option>
+            <option value="#">힘내는 서비스</option>
+            <option value="#">우울한 서비스</option>
+          </select>
+          <select class="input-site" name="site" id="site">
+            <option value="#">패밀리 사이트</option>
+            <option value="#">친구 사이트</option>
+            <option value="#">학교 사이트</option>
+            <option value="#">가족 사이트</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer02">
+        <div class="footer02-left">
+          <img src="./imgs/logo.png" alt="logo" />
+          <div class="footer-text">
+            <p>시청자 상담실 (문의 및 시청자 의견) : <b> 123-123-1234 </b></p>
+            <p>
+              (주)케이티씨콘텐츠 : 오승덕, 김윤주, 황예진, 홍민주
+              <b> 123-123-1234 </b>
+            </p>
+            <p>
+              <span>
+                본점 : 서울특별시 서초구 서초대로77길 41 대동2빌딩 9층
+              </span>
+              <span> 사업자 등록번호 : 123-45-6789 </span>
+              <span> 공정거래위원회 웹사이트 </span>
+            </p>
+          </div>
+        </div>
+        <div class="footer-sns">
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-youtube"></i></a>
+          <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+/* styles.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f1c3f, #1e3a8a);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: white;
+}
+
+.signup-container {
+  text-align: center;
+}
+.signup-container h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+.signup-container p {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  color: black;
+}
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container .center-input {
+  text-align: center;
+}
+.form-container label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.form-container small {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+.form-container .terms {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border: 1px solid #1e3a8a;
+  background-color: #1e3a8a;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.social-login {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.social-icons img {
+  width: 40px;
+  cursor: pointer;
+}

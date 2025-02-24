@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/53e2be1d47.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/eventstyle.css" />
+    <script defer src="./script.js"></script>
+    <title>이벤트 페이지</title>
+  </head>
+  <body>
+    <!-- 상단 바 -->
+    <header>
+      <div class="header-inner">
+        <!-- 헤더 로고 (왼쪽) -->
+        <div class="header-logo-box">
+          <a href="#">
+            <img src="./imgs/logo.png" alt="logo" />
+          </a>
+        </div>
+        <!-- 헤더 네비게이션 바 (중앙) -->
+        <div class="header-nav-bar">
+          <ul>
+            <li id="home" class="nav-bar">
+              <a href="./index.html">홈</a>
+            </li>
+            <li class="nav-bar">
+              <a id="movie" href="./movie.html">영화</a>
+            </li>
+            <li class="nav-bar">
+              <a id="drama" href="#">드라마</a>
+            </li>
+            <li class="nav-bar">
+              <a id="show" href="#">에능</a>
+            </li>
+            <li class="nav-bar">
+              <a id="new" href="./event.html">EVENT</a>
+            </li>
+          </ul>
+        </div>
+        <!-- 헤더 아이콘 박스 (오른쪽) -->
+        <div class="items">
+          <div class="items-box">
+            <div class="search">
+              <!-- 검색 아이콘 -->
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="검색어를 입력하세요." />
+            </div>
+            <!-- 하트 아이콘 -->
+            <div class="likes">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <!-- 프로필 아이콘 -->
+            <div class="user">
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+          <!-- 프로필 아이콘 눌렀을때 문의하기, 로그아웃 박스 생성 -->
+          <div class="user-box">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-regular fa-circle-question"></i>문의하기</a>
+              </li>
+              <hr />
+              <li>
+                <a href="#">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  로그아웃</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인 내용 -->
+    <main>
+      <section class="section_01">
+        <div class="article">
+          <div class="article_inner">
+            <div class="inner-top"></div>
+            <div class="txt">
+              <h4>1.</h4>
+              <h3>진료받고 싶은 최고의 의사를 골라주세요!</h3>
+            </div>
+            <div class="scene">
+              <!-- 카드 전체 -->
+              
+              <!-- 카드1 -->
+              <label class="card-wrap">
+                <input class="flipcard" type="checkbox" />
+                <div class="card">
+                  <!-- 카드 앞 -->
+                  <div class="front card-face">
+                    <span>후보 1</span>
+                    <p class="number">*이미지를 눌러보세요</p>
+                    <img class="card-photo" src="./imgs/person_01.jpg" alt="person01" />
+                  </div>
+                  <!-- 카드 뒤 -->
+                  <div class="back card-face">
+                    <div class="back-text">
+                      <h1>낭만닥터 김사부</h1>
+                      <p>
+                        돌담병원의 외과 과장 <br />
+                        국내 유일 트리플 보드 외과 의사, 한때 신의 손이라 불리었으나 지금은 스스로를 낭만닥터라 칭하며 은둔생활을 즐기고 있는 진짜 괴짜 의사. 세상에서는 그를 김사부라 부른다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <input class="num" type="checkbox"> 후보1 : 김사부
+              </label>
+              
+              <!-- 카드2 -->
+              <label class="card-wrap">
+                <input class="flipcard" type="checkbox" />
+                <div class="card">
+                  <!-- 카드 앞 -->
+                  <div class="front card-face">
+                    <span>후보 2</span>
+                    <p class="number">*이미지를 눌러보세요</p>
+                    <img class="card-photo" src="./imgs/person_02.jpg" alt="person02" />
+                  </div>
+                  <!-- 카드 뒤 -->
+                  <div class="back card-face">
+                    <div class="back-text">
+                      <h1>중증외상센터</h1>
+                      <p>
+                        싸가지가 없는 천재 외과의사 <br />
+                        실력도, 돈도, 사명감도 있지만 싸가지가 없는 천재 외과의사. 위급상황에서도 초인적인 능력으로 신들린 스킬을 발휘하며, 과거 ‘국제 평화 의사회’ 에이스로도 활약했다. 한국대학병원의 중증외상팀을 심폐 소생하기 위해 등판한다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <input class="num" type="checkbox"> 후보1 : 김사부
+              </label>
+              
+              <!-- 카드3 -->
+              <label class="card-wrap">
+                <input class="flipcard" type="checkbox" />
+                <div class="card">
+                  <!-- 카드 앞 -->
+                  <div class="front card-face">
+                    <span>후보 3</span>
+                    <p class="number">*이미지를 눌러보세요</p>
+                    <img class="card-photo" src="./imgs/person_03.jpg" alt="person03" />
+                  </div>
+                  <!-- 카드 뒤 -->
+                  <div class="back card-face">
+                    <div class="back-text">
+                      <h1>닥터스</h1>
+                      <p>
+                        돌담병원의 외과 과장 <br />
+                        국내 유일 트리플 보드 외과 의사, 한때 신의 손이라 불리었으나 지금은 스스로를 낭만닥터라 칭하며 은둔생활을 즐기고 있는 진짜 괴짜 의사. 세상에서는 그를 김사부라 부른다.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <input class="num" type="checkbox"> 후보1 : 김사부
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- <section class="section_03">
+        <div class="article">이벤트 지원 마감일까지</div>
+      </section>
+      <section class="section_04">
+        <div class="article">전체일정 모집</div>
+      </section>
+    </main> -->
+
+    <!-- java Date 사용 -->
+    <div class="count-container">
+      <h1>투표 마감까지</h1>
+      <div id="countdown">
+        <div class="box">
+          <div class="time-box">
+            <span id="days"></span>
+          </div>
+          <span class="label">DAYS</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="box">
+          <div class="time-box">
+            <span id="hours"></span>
+          </div>
+          <span class="label">HOURS</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="box">
+          <div class="time-box">
+            <span id="minutes"></span>
+          </div>
+          <span class="label">MINS</span>
+        </div>
+        <span class="separator">:</span>
+        <div class="box">
+          <div class="time-box">
+            <span id="seconds"></span>
+          </div>
+          <span class="label">SECS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 영역 -->
+    <footer>
+      <div class="footer01">
+        <div class="footer01-left-link">
+          <span><a href="#">회사소개</a></span>
+          <span><a href="#">광고/제휴문의</a></span>
+          <span><a href="#">이용약관</a></span>
+          <span><a href="#">개인정보 처리방침</a></span>
+          <span><a href="#">미디어센터</a></span>
+          <span><a href="#">법적고지</a></span>
+          <span><a href="#">이메일무단수집거부</a></span>
+          <span><a href="#">문의하기</a></span>
+          <span><a href="#">고객센터</a></span>
+        </div>
+        <!-- 오른쪽 드롭다운 -->
+        <div class="footer-input">
+          <select class="input-language" name="language" id="language">
+            <option value="#">KO</option>
+            <option value="#">EG</option>
+          </select>
+          <select class="input-service" name="service" id="service">
+            <option value="#">연관 서비스</option>
+            <option value="#">관련 서비스</option>
+            <option value="#">힘내는 서비스</option>
+            <option value="#">우울한 서비스</option>
+          </select>
+          <select class="input-site" name="site" id="site">
+            <option value="#">패밀리 사이트</option>
+            <option value="#">친구 사이트</option>
+            <option value="#">학교 사이트</option>
+            <option value="#">가족 사이트</option>
+          </select>
+        </div>
+      </div>
+      <div class="footer02">
+        <div class="footer02-left">
+          <img src="./imgs/logo.png" alt="logo" />
+          <div class="footer-text">
+            <p>시청자 상담실 (문의 및 시청자 의견) : <b> 123-123-1234 </b></p>
+            <p>
+              (주)케이티씨콘텐츠 : 오승덕, 김윤주, 황예진, 홍민주
+              <b> 123-123-1234 </b>
+            </p>
+            <p>
+              <span>
+                본점 : 서울특별시 서초구 서초대로77길 41 대동2빌딩 9층
+              </span>
+              <span> 사업자 등록번호 : 123-45-6789 </span>
+              <span> 공정거래위원회 웹사이트 </span>
+            </p>
+          </div>
+        </div>
+        <div class="footer-sns">
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-youtube"></i></a>
+          <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
