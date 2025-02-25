@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/f3b59c9a5b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./register.css" />
+    <script defer src="./register.js"></script>
+  </head>
+  <body>
+    <!-- 상단 바 -->
+    <header>
+      <div class="header-inner">
+        <!-- 헤더 로고 (왼쪽) -->
+        <div class="header-logo-box">
+          <a href="#">
+            <img src="../imgs/logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <!-- 헤더 아이콘 박스 (오른쪽) -->
+        <div class="items">
+          <div class="items-box">
+            <div class="search">
+              <!-- 검색 아이콘 -->
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="검색어를 입력하세요." />
+            </div>
+            <!-- 하트 아이콘 -->
+            <div class="likes">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <!-- 프로필 아이콘 -->
+            <div class="user">
+              <i class="fa-regular fa-user"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="login-box">
+          <h2 class="title">Login</h2>
+          <form>
+            <div class="input-group">
+              <label for="username">이름</label>
+              <input type="text" id="username" placeholder="" />
+            </div>
+            <div class="input-group">
+              <label for="id">아이디</label>
+              <input type="text" id="id" placeholder="ID" />
+            </div>
+            <div class="input-group">
+              <label for="password">비밀번호</label>
+              <input type="password" id="password1" placeholder="Password" />
+              <input type="password" id="password2" placeholder="Password" />
+            </div>
+            <button type="submit" class="login-button secondary">로그인</button>
+            <button type="button" class="login-button primary">
+              <a href="register.html">회원가입</a>
+            </button>
+          </form>
+          <div class="social-login">
+            <p>소셜아이디로 간편로그인</p>
+            <div class="social-icons">
+              <div class="social-item">
+                <button class="social naver"></button>
+                <span class="social-text">네이버로 로그인</span>
+              </div>
+              <div class="social-item">
+                <button class="social kakao"></button>
+                <span class="social-text">카카오로 로그인</span>
+              </div>
+              <div class="social-item">
+                <button class="social google"></button>
+                <span class="social-text">구글로 로그인</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer01">
+        <div class="footer01-left-link">
+          <span><a href="#">회사소개</a></span>
+          <span><a href="#">광고/제휴문의</a></span>
+          <span><a href="#">이용약관</a></span>
+          <span><a href="#">개인정보 처리방침</a></span>
+          <span><a href="#">미디어센터</a></span>
+          <span><a href="#">법적고지</a></span>
+          <span><a href="#">이메일무단수집거부</a></span>
+          <span><a href="#">문의하기</a></span>
+          <span><a href="#">고객센터</a></span>
+        </div>
+        <!-- 오른쪽 드롭다운 -->
+        <div class="footer-input">
+          <select class="input-language" name="language" id="language">
+            <option value="#">KO</option>
+            <option value="#">EG</option>
+          </select>
+          <select class="input-service" name="service" id="service">
+            <option value="#">연관 서비스</option>
+            <option value="#">관련 서비스</option>
+            <option value="#">힘내는 서비스</option>
+            <option value="#">우울한 서비스</option>
+          </select>
+          <select class="input-site" name="site" id="site">
+            <option value="#">패밀리 사이트</option>
+            <option value="#">친구 사이트</option>
+            <option value="#">학교 사이트</option>
+            <option value="#">가족 사이트</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer02">
+        <div class="footer02-left">
+          <img src="./imgs/logo.png" alt="logo" />
+          <div class="footer-text">
+            <p>시청자 상담실 (문의 및 시청자 의견) : <b>123-123-1234</b></p>
+            <p>
+              (주)케이티씨콘텐츠 : 오승덕, 김윤주, 황예진, 홍민주
+              <b>123-123-1234</b>
+            </p>
+            <p>
+              <span
+                >본점 : 서울특별시 서초구 서초대로77길 41 대동2빌딩 9층</span
+              >
+              <span>사업자 등록번호 : 123-45-6789</span>
+              <span>공정거래위원회 웹사이트</span>
+            </p>
+          </div>
+        </div>
+        <div class="footer-sns">
+          <a href="#"> <i class="fab fa-instagram"></i></a>
+          <a href="#"> <i class="fab fa-facebook"></i></a>
+          <a href="#"> <i class="fab fa-youtube"></i></a>
+          <a href="#"> <i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
