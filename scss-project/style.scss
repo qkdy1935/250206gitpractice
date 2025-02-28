@@ -26,6 +26,7 @@ body {
   font-family: map-get($map: $fontFamily, $key: mont-font-family);
 }
 
+// 전체 구조
 .cd-section {
   height: 100vh;
   & > div {
@@ -45,6 +46,180 @@ body {
 
 /* content-item */
 
+/* ==== header ==== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .gnb-inner {
+    width: calc(100% - 40px);
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    .logo {
+      float: left;
+      img {
+        padding-top: 16px;
+      }
+    }
+    .gnb {
+      float: right;
+      .menu {
+        display: none; // 모바일용
+      }
+      .slogan {
+        font-size: 1.8rem;
+        font-style: italic;
+      }
+    }
+    .trigger {
+      display: none;
+    }
+  }
+}
+
+/* ==== gototop ==== */
+.gototop {
+  display: none;
+}
+
+/* ==== hiaring ==== */
+.btn-hiaring {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  color: map-get($map: $color, $key: main-light-color);
+  background: map-get($map: $color, $key: main-dark-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba($color: #000000, $alpha: 0.4);
+  transition: all 0.5s;
+  i {
+    transform: rotateY("180deg");
+    margin-right: 6px;
+  }
+  &:active {
+    transform: scale(0);
+  }
+}
+
+/* ==== home ==== */
+.home-inner {
+  background: map-get($map: $color, $key: main-light-color);
+  height: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    background: map-get($map: $color, $key: main-dark-color);
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: overlay 1s 2s ease-in-out both;
+  }
+  .welcome-text {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    // height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: lighter;
+    text-align: center;
+    font-family: map-get($map: $fontFamily, $key: sans-font-family);
+    animation: slideup 2s linear both;
+    span {
+      display: block;
+      font-weight: lighter;
+      font-size: 2.6rem;
+      i {
+        color: map-get($map: $color, $key: vars-bg-color);
+      }
+    }
+  }
+  .opacity-image {
+    background: url("./images/section-bg-01.jpg") center/cover no-repeat;
+    height: 100%;
+    opacity: 0;
+    animation: opacity-image 1s 2.6s ease-in both;
+  }
+  .home-heading {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    span {
+      display: block;
+      font-size: 10rem;
+      color: map-get($map: $color, $key: main-light-color);
+      width: 0;
+      overflow: hidden;
+      animation: reveal 1s 3s ease-in-out both;
+      &:nth-child(1) {
+        animation-delay: 3s;
+      }
+      &:nth-child(2) {
+        animation-delay: 3.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 3.4s;
+      }
+    }
+  }
+}
+
+/* ==== about ==== */
+.about-inner {
+  height: 100%;
+  background: map-get($map: $color, $key: about-bg-color)
+    url("./images/line-drawing.png") right bottom no-repeat;
+  .about-items {
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 150px;
+    color: map-get($map: $color, $key: main-light-color);
+    .item {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 20px;
+      cursor: pointer;
+      &:hover {
+        h3 {
+          color: map-get($map: $color, $key: main-dark-color);
+        }
+        img {
+          filter: invert(0);
+        }
+      }
+      img {
+        height: 100px;
+        filter: invert(1);
+        transition: all 0.5s;
+      }
+      span {
+        h3 {
+          font-size: 2.8rem;
+          font-weight: 500;
+          letter-spacing: -1px;
+          transition: color 0.5s;
+        }
+        p {
+          font-size: 1.8rem;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
 /* ==== project === */
 .project-inner {
   height: 100%;
@@ -53,7 +228,6 @@ body {
   overflow: hidden;
   input {
     display: none;
-    /* 슬라이드 */
     &[id="tab1"]:checked {
       & ~ .tabs {
         margin-left: 0;
@@ -83,7 +257,6 @@ body {
     width: 300%;
     height: 100%;
     transition: all 0.3s;
-    border: 1px solid #f00;
     .tab {
       width: 33.3333%;
       height: 100%;
@@ -114,7 +287,6 @@ body {
         ul {
           margin: 30px 0;
           line-height: 2.4rem;
-          // 전후문자를 이용한 폰트어썸 추가하기
           li::before {
             content: "\f105";
             font-family: fontawesome;
@@ -126,7 +298,7 @@ body {
           display: flex;
           div {
             text-align: center;
-            width: 33%;
+            width: 33.33%;
             color: map-get($map: $color, $key: sub-font-color);
             span {
               display: block;
@@ -493,5 +665,223 @@ body {
         line-height: 2.6rem;
       }
     }
+  }
+}
+
+/* ==== modal ==== */
+.modal {
+  font-family: map-get($map: $fontFamily, $key: sans-font-family);
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: map-get($map: $color, $key: main-light-color);
+    z-index: 3;
+    .header-inner {
+      width: 95%;
+      margin: 0 auto;
+      height: 90px;
+      line-height: 90px;
+      border-bottom: 1px solid map-get($map: $color, $key: content-bg-color);
+      .modal-display {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .hiring-main {
+    height: 600px;
+    position: relative;
+    .hiring-heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: map-get($map: $color, $key: main-light-color);
+      span {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          width: 50px;
+          height: 2px;
+          background: map-get($map: $color, $key: main-light-color);
+          position: absolute;
+          top: 50%;
+        }
+        &::before {
+          right: 120%;
+        }
+        &::after {
+          left: 120%;
+        }
+      }
+      h1 {
+        font-size: 6rem;
+        font-weight: lighter;
+        margin-top: 20px;
+      }
+    }
+    &.project-main1 {
+      background: url("./images/project-main-01-01.jpg") center/cover no-repeat;
+    }
+  }
+  .hiring-info {
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: flex;
+    & > div {
+      width: 50%;
+      height: 600px;
+      &.center-parent {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .center-child {
+          width: 70%;
+          h2 {
+            font-size: 3.6rem;
+            font-weight: normal;
+          }
+          p {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.5rem;
+          }
+        }
+      }
+      &.photo {
+        img {
+          width: 100%;
+        }
+        &.project-info {
+          font-size: 2rem;
+          font-weight: 300;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .hiring-slogan {
+    padding: 100px 0;
+    p {
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+      width: 70%;
+      margin: auto;
+      position: relative;
+      &::before {
+        content: ",,";
+        font-size: 30rem;
+        font-family: map-get($map: $fontFamily, $key: over-font-family);
+        color: map-get($map: $color, $key: content-bg-color);
+        transform: rotate(180deg);
+        position: absolute;
+        top: -140px;
+        left: -100px;
+      }
+    }
+  }
+}
+
+/* ==== feather light ==== */
+.featherlight {
+  .featherlight-content {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: auto;
+    padding: 0;
+    border-bottom: 25px solid transparent;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-height: 100%;
+    background: #fff;
+    cursor: auto;
+    white-space: normal;
+    width: 100%;
+    height: 100%;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .featherlight-close-icon {
+    position: absolute;
+    z-index: 9999;
+    top: 30px;
+    right: 70px;
+    line-height: 25px;
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    border: none;
+    padding: 0;
+    font-size: 3rem;
+  }
+}
+
+/* ==== animation ==== */
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }
